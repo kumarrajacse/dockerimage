@@ -48,7 +48,10 @@ steps('cluster'){
 withKubeConfig(credentialsId: 'kubernetes') {
 sh 'kubectl delete -f Deployment.yml '
 sh 'kubectl delete -f Service.yml'
-
+sh 'kubectl docker image rmi kumarartech/tomcat:2.0'
+sh 'kubectl  apply -f Deployment.yml '
+sh 'kubectl  apply -f Service.yml'
+	
 }
 }
 }	        
