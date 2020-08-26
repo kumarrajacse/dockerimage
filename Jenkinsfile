@@ -46,7 +46,9 @@ pipeline{
 	stage('Deployment in cluster'){
 steps('cluster'){
 withKubeConfig(credentialsId: 'kubernetes') {
-sh 'kubectl get nodes -o wide'
+sh 'kubectl apply -f Deployment.yml'
+sh 'kubectl apply -f Service.yml'
+sleep 30s
 }
 }
 }	        
