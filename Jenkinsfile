@@ -48,7 +48,7 @@ steps('cluster'){
 withKubeConfig(credentialsId: 'kubernetes') {
 sh 'kubectl apply -f Deployment.yml'
 sh 'kubectl apply -f Service.yml'
-sleep 30s
+
 }
 }
 }	        
