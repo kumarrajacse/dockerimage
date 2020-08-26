@@ -28,7 +28,7 @@ pipeline{
           steps
             {
            echo "building the docker image "
-           sh 'docker build -t kumarartech/tomcat:$BUILD_NUMBER .'
+           sh 'docker build -t kumarartech/tomcat:2.0 .'
             }
             }
 		
@@ -40,7 +40,7 @@ pipeline{
 		{
 		sh 'docker login -u ${username} -p ${passwd}'
 		}
-		sh 'docker push kumarartech/tomcat:$BUILD_NUMBER'
+		sh 'docker push kumarartech/tomcat:2.0'
 		}
 	    }
 	stage('Deployment in cluster'){
