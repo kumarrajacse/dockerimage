@@ -46,8 +46,8 @@ pipeline{
 	stage('Deployment in cluster'){
 steps('cluster'){
 withKubeConfig(credentialsId: 'kubernetes') {
-sh 'kubectl apply -f Deployment.yml;kubectl rollout restart deploy Deployment'
-sh 'kubectl apply -f Service.yml'
+sh 'kubectl delete -f Deployment.yml '
+sh 'kubectl delete -f Service.yml'
 
 }
 }
