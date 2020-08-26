@@ -1,20 +1,21 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: employee
+  name: hello-world
 spec:
-replicas: 3
-selector:
-matchLabels:
-app: hello-world
-template:
-metadata:
-labels:
-app: hello-world
-spec:
-containers:
-- name: hello-world
-image: kumarartech/tomcat:$BUILD_NUMBER
-ports:
-- containerPort: 8081
-protocol: TCP
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: kumarartech/tomcat:$BUILD_NUMBER
+        ports:
+        - containerPort: 8080
+          protocol: TCP
