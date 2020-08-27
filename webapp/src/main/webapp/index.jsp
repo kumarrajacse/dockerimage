@@ -1,9 +1,5 @@
 welcome to Devops world 
 
-
-
-Deployment success in kubernetes 
-
 <html>
 <!-- Text between angle brackets is an HTML tag and is not displayed.
 Most tags, such as the HTML and /HTML tags that surround the contents of
