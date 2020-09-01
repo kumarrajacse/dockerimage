@@ -1,6 +1,3 @@
-Please fill the below details .
-
-
 
 <form>
 <div class="container">
