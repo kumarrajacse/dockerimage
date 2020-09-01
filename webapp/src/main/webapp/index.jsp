@@ -1,30 +1,34 @@
-welcome to Devops world , My deployment success .
+welcome to Devops world 
 
-<html>
-<!-- Text between angle brackets is an HTML tag and is not displayed.
-Most tags, such as the HTML and /HTML tags that surround the contents of
-a page, come in pairs; some tags, like HR, for a horizontal rule, stand
-alone. Comments, such as the text you're reading, are not displayed when
-the Web page is shown. The information between the HEAD and /HEAD tags is
-not displayed. The information between the BODY and /BODY tags is displayed.-->
-<head>
-<title>Enter a title, displayed at the top of the window.</title>
-</head>
-<!-- The information between the BODY and /BODY tags is displayed.-->
-<body>
-<h1>Enter the main heading, usually the same as the title.</h1>
-<p>Be <b>bold</b> in stating your key points. Put them in a list: </p>
-<ul>
-<li>The first item in your list</li>
-<li>The second item; <i>italicize</i> key words</li>
-</ul>
-<p>Improve your image by including an image. </p>
-<p><img src="http://www.mygifs.com/CoverImage.gif" alt="A Great HTML Resource"></p>
-<p>Add a link to your favorite <a href="https://www.dummies.com/">Web site</a>.
-Break up your page with a horizontal rule or two. </p>
-<hr>
-<p>Finally, link to <a href="page2.html">another page</a> in your own Web site.</p>
-<!-- And add a copyright notice.-->
-<p>&#169; Wiley Publishing, 2011</p>
-</body>
-</html>
+please fill the below details .
+
+<form name="regForm">
+<label>Username: <input type="text" id="username"></label>
+<label>Password: <input type="password" id="pwd"></label>
+<input type="submit" class="login" value="Log In" onclick="validation()" formtarget="_blank">
+</form>
+
+<form action="action_page.php">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
